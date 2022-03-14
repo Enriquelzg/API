@@ -1,9 +1,10 @@
-let mongoose = require ("mongoose");
-let {Schema} = mongoose;
+const mongoose = require('mongoose');
 
-let model = new Schema({
-    nombre: {type: String},
-    contrasenia: {type: String}
+const { Schema } = mongoose;
+
+const userModel = new Schema({
+  name: { type: String },
+  password: { type: String },
 });
 
-module.export = mongoose.model("modeluser", model);
+module.export = mongoose.model('modeluser', userModel);

@@ -1,19 +1,12 @@
-const { route } = require("express/lib/application");
+const { express } = require('express/lib/application');
+const userController = require('../controllers/userController');
 
 // API routes
-let usercontroller = express.Router();
+const router = express.Router();
 
-usercontroller
-  .route("/usercontroller")
-  .get(userControllerCtrl.findAlluserController)
-  .post(userControllerCtrl.adduserController);
-
-usercontroller
-  .route("/usercontroler/:id")
-  .get(userControllerCtrl.findById)
-  .put(userControllerCtrl.updateuserController)
-  .delete(userControllerCtrl.deleteuserController);
-
-app.use("/api", userController);
+router.get('/', userController.findById);
+router.post('/', userController.adduserController);
+router.delete('/', userController.deleteuserController);
+router.update('/', userController.updateuserController);
 
 module.export = router;
