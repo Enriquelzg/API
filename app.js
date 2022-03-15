@@ -1,17 +1,12 @@
 const express = require('express');
 
 const app = express();
-const bodyParser = require('body-parser');
-const methodOverride = require('method-override');
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(methodOverride());
+const routeruse = require('./routes/userRoutes');
 
-const router = require('./routes/userRoutes');
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
-app.use(router);
+app.use('/user', routeruse);
 
-const userController = require('./controllers/userController');
-
-app.use('/api', userController);
+module.export = app;
