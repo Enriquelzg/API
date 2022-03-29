@@ -9,4 +9,4 @@ app.use(express.json());
 
 app.use('/user', routeruse);
 
-module.export = app;
+module.exports = app;
