@@ -2,10 +2,9 @@
   "name": "api-rest",
   "version": "1.0.0",
   "dependencies": {
-    "body-parser": "^1.5.1",
-    "express": "^4.7.1",
+    "express": "^4.17.3",
     "method-override": "^2.1.2",
-    "mongoose": "~3.6.11"
+    "mongoose": "^6.2.9"
   },
   "description": "Mi primera API REST",
   "main": "index.js",
